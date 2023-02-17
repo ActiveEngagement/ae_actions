@@ -1,12 +1,12 @@
-import factory from './src/input_builder_factory.js';
+import createInputFactory from './src/input_builder_factory.js';
 import { result, valid, invalid } from './src/result.js';
-import { InputBuilderError, InvalidInputsError } from './src/error';
+import { AeActionsError, InvalidInputsError } from './src/error';
 
 export {
-    factory,
+    createInputFactory,
     result,
     valid,
     invalid,
-    InputBuilderError,
+    AeActionsError,
     InvalidInputsError
 };
