@@ -38,7 +38,7 @@ export default function() {
     function makeFromCallback(name, callback) {
         const instance = createInputBuilder(name, callback);
 
-        for (const registration of registry) {
+        for(const registration of registry) {
             instance[registration.name] = (...args) => registration.callback(instance, this, ...args);
         }
 
@@ -46,11 +46,11 @@ export default function() {
     }
 
     function make(name) {
-        if (!inputCallback) {
+        if(!inputCallback) {
             throw new InputBuilderError('A getInputWith callback is required in order to instantiate an input builder!');
         }
 
-        return this.makeFromCallback(name, inputCallback)
+        return this.makeFromCallback(name, inputCallback);
     }
 
     return { register, defaults, getInputWith, makeFromCallback, make };

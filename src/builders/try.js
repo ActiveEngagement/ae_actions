@@ -5,7 +5,7 @@ export default function(builder, factory, callback) {
             callback(builder);
 
             const result = builder.run();
-            if (result.valid) {
+            if(result.valid) {
                 return result;
             }
         }

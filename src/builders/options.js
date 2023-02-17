@@ -1,6 +1,6 @@
 import { result, invalid } from '../result.js';
 
-export default function (builder, _factory, ...values) {
+export default function(builder, _factory, ...values) {
     return builder.use((value, name) => {
         const valueTerm = typeof value === 'string' ? value.toLowerCase() : value;
         const matchIndex = values.findIndex(currentValue => {

@@ -27,6 +27,6 @@ describe('input_builder_factory.js', () => {
 
             expect(f).toThrow(InputBuilderError);
             expect(f).toThrow('A getInputWith callback is required in order to instantiate an input builder!');
-        })
-    })
+        });
+    });
 });

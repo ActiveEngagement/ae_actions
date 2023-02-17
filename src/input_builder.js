@@ -15,18 +15,18 @@ export default function(name, getInput) {
             value = null;
         }
 
-        for (const operate of operations) {
+        for(const operate of operations) {
             let result = operate(value, name);
 
-            if (result === undefined) {
+            if(result === undefined) {
                 result = valid();
             }
 
-            if (!result.valid) {
+            if(!result.valid) {
                 return result;
             }
 
-            if (result.data !== undefined) {
+            if(result.data !== undefined) {
                 value = result.data;
             }
         }
@@ -37,7 +37,7 @@ export default function(name, getInput) {
     function get() {
         const result = this.run();
 
-        if (!result.valid) {
+        if(!result.valid) {
             throw new InvalidInputsError(result.message || `"${name}" is not valid!`);
         }
 
