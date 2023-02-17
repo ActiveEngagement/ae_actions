@@ -6,8 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## 0.1.0 - 2023-02-17
+
+### Fixed
+- Corrected some export names.
+
 ## 0.0.1 - 2023-02-17
 ### Added
 - Initial version.
 
-[Unreleased]: https://github.com/ActiveEngagement/theguru/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/ActiveEngagement/theguru/compare/v0.1.0...HEAD
