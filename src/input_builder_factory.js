@@ -7,6 +7,7 @@ import json from './builders/json.js';
 import options from './builders/options.js';
 import ifPresent from './builders/ifPresent.js';
 import attempt from './builders/try.js';
+import { snakeToCamel } from './util.js';
 
 export default function() {
     const registry = [];
@@ -61,7 +62,7 @@ export default function() {
             if(builderCallback) {
                 builderCallback(input);
             }
-            return inputs[name] = input.get();
+            return inputs[snakeToCamel(name)] = input.get();
         });
 
         return inputs;
