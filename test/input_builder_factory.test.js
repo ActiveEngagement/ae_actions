@@ -41,17 +41,17 @@ describe('input_builder_factory.js', () => {
             let innerBoolean = undefined;
 
             const inputs = factory.define((input) => {
-                innerRequired = input('required', b => b.required());
+                innerRequired = input('required_input', b => b.required());
                 innerOptional = input('optional');
                 innerBoolean = input('boolean', b => b.boolean());
             });
 
-            expect(innerRequired).toBe('required!');
+            expect(innerRequired).toBe('required_input!');
             expect(innerOptional).toBe('optional!');
             expect(innerBoolean).toBe(true);
 
             expect(inputs).toStrictEqual({
-                required: 'required!',
+                requiredInput: 'required_input!',
                 optional: 'optional!',
                 boolean: true
             });
