@@ -53,5 +53,19 @@ export default function() {
         return this.makeFromCallback(name, inputCallback);
     }
 
-    return { register, defaults, getInputWith, makeFromCallback, make };
+    function define(inputCallback) {
+        const inputs = {};
+
+        inputCallback((name, builderCallback) => {
+            const input = this.make(name);
+            if (builderCallback) {
+                builderCallback(input);
+            }
+            return inputs[name] = input.get();
+        });
+
+        return inputs;
+    }
+
+    return { register, defaults, getInputWith, makeFromCallback, make, define };
 }
