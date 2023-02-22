@@ -58,7 +58,7 @@ export default function() {
 
         inputCallback((name, builderCallback) => {
             const input = this.make(name);
-            if (builderCallback) {
+            if(builderCallback) {
                 builderCallback(input);
             }
             return inputs[name] = input.get();
